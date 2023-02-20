@@ -17,3 +17,19 @@ jobs:
         run: npm ci
       - name: Run Test
         run: npm test
+  deploy:
+    runs-on: Ubuntu-Latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install NodeJs
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: Install dependences
+        run: npm ci
+      - name: Run Build
+        run: npm Build
+#      - name: upload to some place
+      -name: Deploy
+       run: echo "deploy"
