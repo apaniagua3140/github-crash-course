@@ -29,7 +29,7 @@ jobs:
       - name: Install dependences
         run: npm ci
       - name: Run Build
-        run: npm run Build
+        run: npm run build
 #      - name: upload to some pla
       - name: Deploy
         run: echo "deploy"
